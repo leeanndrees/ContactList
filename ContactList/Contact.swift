@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Contact {
+class Contact {
     
     var firstName: String
     var lastName: String

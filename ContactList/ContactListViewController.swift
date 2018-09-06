@@ -12,6 +12,21 @@ class ContactListViewController: UITableViewController {
 
     var contactsToShow: [Contact] = []
     
+    func displayContacts() {
+        let contacts = [
+            ("Leeann", "Drees", "555"),
+            ("Matt", "", "555")
+        ]
+        
+        for item in contacts {
+            let newContact = Contact()
+            newContact.firstName = String(item[0])
+            newContact.lastName = String(item[1])
+            newContact.phoneNumber = String(item[2])
+            contactsToShow.append(newContact)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
