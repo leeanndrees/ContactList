@@ -8,10 +8,10 @@
 
 import Foundation
 
-class Contact {
+struct Contact {
     
-    var firstName: String
-    var lastName: String
-    var phoneNumber: String
+    var firstName = ""
+    var lastName = ""
+    var phoneNumber = ""
     
 }

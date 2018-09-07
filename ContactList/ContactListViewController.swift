@@ -12,6 +12,7 @@ class ContactListViewController: UITableViewController {
 
     var contactsToShow: [Contact] = []
     
+    
     func displayContacts() {
         let contacts = [
             ("Leeann", "Drees", "555"),
@@ -19,18 +20,22 @@ class ContactListViewController: UITableViewController {
         ]
         
         for item in contacts {
-            let newContact = Contact()
-            newContact.firstName = String(item[0])
-            newContact.lastName = String(item[1])
-            newContact.phoneNumber = String(item[2])
+            var newContact = Contact()
+            newContact.firstName = String(item.0)
+            newContact.lastName = String(item.1)
+            newContact.phoneNumber = String(item.2)
             contactsToShow.append(newContact)
         }
+        
+        print(contactsToShow)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        displayContacts()
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,25 +45,25 @@ class ContactListViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 0
+//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return contactsToShow.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
+        cell.textLabel?.text = contactsToShow[indexPath.row].firstName
 
         // Configure the cell...
 
         return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.
