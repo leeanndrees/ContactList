@@ -32,7 +32,6 @@ class ContactListViewController: UITableViewController, AddContactViewController
         navigationController?.popViewController(animated: true)
     }
     
-    var selectedCell = 0
     var contactsToShow: [Contact] = []
     
     
@@ -83,9 +82,13 @@ class ContactListViewController: UITableViewController, AddContactViewController
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedCell = indexPath.row
-        print(selectedCell)
+        performSegue(withIdentifier: "ShowContactDetail", sender: self.contactsToShow[indexPath.row])
     }
+    
+//    func saveSelectedContact(selectedCell: Int) -> Contact {
+//        let selectedContact = contactsToShow[selectedCell]
+//        return selectedContact
+//    }
  
 
     /*
@@ -132,7 +135,7 @@ class ContactListViewController: UITableViewController, AddContactViewController
             controller.delegate = self
         }
         else if segue.identifier == "ShowContactDetail" {
-            let selectedContact = contactsToShow[self.selectedCell]
+            let selectedContact = sender as! Contact
             if let controller = segue.destination as? ContactDetailViewController {
                 controller.selectedContact = selectedContact
             }
