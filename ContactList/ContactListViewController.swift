@@ -81,9 +81,9 @@ class ContactListViewController: UITableViewController, AddContactViewController
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "ShowContactDetail", sender: self.contactsToShow[indexPath.row])
-    }
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        performSegue(withIdentifier: "ShowContactDetail", sender: self.contactsToShow[indexPath.row])
+//    }
     
 //    func saveSelectedContact(selectedCell: Int) -> Contact {
 //        let selectedContact = contactsToShow[selectedCell]
@@ -135,7 +135,9 @@ class ContactListViewController: UITableViewController, AddContactViewController
             controller.delegate = self
         }
         else if segue.identifier == "ShowContactDetail" {
-            let selectedContact = sender as! Contact
+            let selectedIndexPath = self.tableView.indexPathForSelectedRow!
+            let row = selectedIndexPath.row
+            let selectedContact = contactsToShow[row]
             if let controller = segue.destination as? ContactDetailViewController {
                 controller.selectedContact = selectedContact
             }
