@@ -32,7 +32,13 @@
                             <outlet property="delegate" destination="5td-vj-lX8" id="kJL-mS-1Kx"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Contact List" id="gXO-ws-ZNK"/>
+                    <navigationItem key="navigationItem" title="Contact List" id="gXO-ws-ZNK">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="MfA-JZ-ID6">
+                            <connections>
+                                <segue destination="N7K-kP-coe" kind="show" id="i9F-qk-Hi4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M7g-B3-Uic" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
