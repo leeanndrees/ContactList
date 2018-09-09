@@ -32,7 +32,7 @@ class ContactListViewController: UITableViewController, AddContactViewController
         navigationController?.popViewController(animated: true)
     }
     
-
+    var selectedCell = 0
     var contactsToShow: [Contact] = []
     
     
@@ -49,8 +49,6 @@ class ContactListViewController: UITableViewController, AddContactViewController
             newContact.phoneNumber = String(item.2)
             contactsToShow.append(newContact)
         }
-        
-        print(contactsToShow)
     }
     
     override func viewDidLoad() {
@@ -82,6 +80,11 @@ class ContactListViewController: UITableViewController, AddContactViewController
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
         cell.textLabel?.text = "\(contactsToShow[indexPath.row].firstName) \(contactsToShow[indexPath.row].lastName)"
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedCell = indexPath.row
+        print(selectedCell)
     }
  
 
@@ -129,7 +132,7 @@ class ContactListViewController: UITableViewController, AddContactViewController
             controller.delegate = self
         }
         else if segue.identifier == "ShowContactDetail" {
-            let selectedContact = contactsToShow[0]
+            let selectedContact = contactsToShow[self.selectedCell]
             if let controller = segue.destination as? ContactDetailViewController {
                 controller.selectedContact = selectedContact
             }
