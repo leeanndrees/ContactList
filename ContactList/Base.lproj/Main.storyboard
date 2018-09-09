@@ -44,7 +44,7 @@
             </objects>
             <point key="canvasLocation" x="1023.2" y="136.28185907046478"/>
         </scene>
-        <!--Add Contact View Controller-->
+        <!--Add Contact-->
         <scene sceneID="wbw-Dg-Eut">
             <objects>
                 <tableViewController id="N7K-kP-coe" customClass="AddContactViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
@@ -67,6 +67,18 @@
                             <outlet property="delegate" destination="N7K-kP-coe" id="8df-tl-U61"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Add Contact" largeTitleDisplayMode="never" id="CRd-sn-CFY">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="lUG-Jf-qjx">
+                            <connections>
+                                <action selector="cancel" destination="N7K-kP-coe" id="dBW-VK-uso"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="msT-gs-vKY">
+                            <connections>
+                                <action selector="done" destination="N7K-kP-coe" id="9oh-gI-swT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KQ8-lK-CQd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -36,7 +36,16 @@ class AddContactViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
+    
+    @IBAction func cancel() {
+        navigationController?.popViewController(animated: true)
+    }
 
+    @IBAction func done() {
+        navigationController?.popViewController(animated: true)
+    }
+
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
