@@ -10,6 +10,10 @@ import UIKit
 
 class AddContactViewController: UITableViewController {
 
+    @IBOutlet weak var firstNameField: UIView!
+    @IBOutlet weak var lastNameField: UITextField!
+    @IBOutlet weak var phoneNumberField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
