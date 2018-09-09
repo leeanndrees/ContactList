@@ -35,7 +35,7 @@
                     <navigationItem key="navigationItem" title="Contact List" id="gXO-ws-ZNK">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="MfA-JZ-ID6">
                             <connections>
-                                <segue destination="N7K-kP-coe" kind="show" id="i9F-qk-Hi4"/>
+                                <segue destination="N7K-kP-coe" kind="show" identifier="AddContact" id="i9F-qk-Hi4"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -127,7 +127,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="firstNameField" destination="lIT-bI-bed" id="p5O-GB-xrs"/>
+                        <outlet property="firstNameField" destination="Cje-Jv-m6t" id="cpD-X4-gfZ"/>
                         <outlet property="lastNameField" destination="tdc-vP-8B1" id="PEC-Fv-8Zr"/>
                         <outlet property="phoneNumberField" destination="vrn-65-43T" id="AON-gC-6ZN"/>
                     </connections>

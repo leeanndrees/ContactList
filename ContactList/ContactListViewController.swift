@@ -16,7 +16,15 @@
 
 import UIKit
 
-class ContactListViewController: UITableViewController {
+class ContactListViewController: UITableViewController, AddContactViewControllerDelegate {
+    func addContactViewControllerDidCancel(_ controller: AddContactViewController) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func addContactViewController(_ controller: AddContactViewController, didFinishAdding item: Contact) {
+        navigationController?.popViewController(animated: true)
+    }
+    
 
     var contactsToShow: [Contact] = []
     
@@ -105,14 +113,15 @@ class ContactListViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "AddContact" {
+            let controller = segue.destination as! AddContactViewController
+            controller.delegate = self
+        }
     }
-    */
+
 
 }

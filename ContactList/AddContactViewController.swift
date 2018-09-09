@@ -8,11 +8,19 @@
 
 import UIKit
 
+protocol AddContactViewControllerDelegate: class {
+    func addContactViewControllerDidCancel(_ controller: AddContactViewController)
+    
+    func addContactViewController(_ controller: AddContactViewController, didFinishAdding item: Contact)
+}
+
+
 class AddContactViewController: UITableViewController {
 
-    @IBOutlet weak var firstNameField: UIView!
+    @IBOutlet weak var firstNameField: UITextField!
     @IBOutlet weak var lastNameField: UITextField!
     @IBOutlet weak var phoneNumberField: UITextField!
+    weak var delegate: AddContactViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,11 +55,16 @@ class AddContactViewController: UITableViewController {
     
     
     @IBAction func cancel() {
-        navigationController?.popViewController(animated: true)
+        delegate?.addContactViewControllerDidCancel(self)
     }
 
     @IBAction func done() {
-        navigationController?.popViewController(animated: true)
+        var item = Contact()
+        item.firstName = firstNameField.text!
+        item.lastName = lastNameField.text!
+        item.phoneNumber = phoneNumberField.text!
+        
+        delegate?.addContactViewController(self, didFinishAdding: item)
     }
 
     
