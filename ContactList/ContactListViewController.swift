@@ -6,6 +6,14 @@
 //  Copyright © 2018 DetroitLabs. All rights reserved.
 //
 
+/* Build an iOS app that stores and manages a contact list
+ Your app should utilize Model-View-Controller architecture
+ On the main page, your app should list each contact’s name in a table view
+ The user should be able to swipe to delete items
+ Your app should have a button which allows the user to add contacts to the list
+ When the user clicks on a name in the table view, they should be taken to a detail page that displays the contact’s name and phone number
+ BONUS: Give the user the ability to edit contact details */
+
 import UIKit
 
 class ContactListViewController: UITableViewController {
@@ -57,10 +65,7 @@ class ContactListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
-        cell.textLabel?.text = contactsToShow[indexPath.row].firstName
-
-        // Configure the cell...
-
+        cell.textLabel?.text = "\(contactsToShow[indexPath.row].firstName) \(contactsToShow[indexPath.row].lastName)"
         return cell
     }
  

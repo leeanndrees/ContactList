@@ -59,13 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				43D055972141BD1B00317BE2 /* AppDelegate.swift */,
+				43D055AD2141C48A00317BE2 /* Contact.swift */,
 				43D0559B2141BD1B00317BE2 /* Main.storyboard */,
 				43D055AB2141BFB300317BE2 /* AddContactViewController.swift */,
+				43D055A92141BF6100317BE2 /* ContactListViewController.swift */,
 				43D0559E2141BD1B00317BE2 /* Assets.xcassets */,
 				43D055A02141BD1B00317BE2 /* LaunchScreen.storyboard */,
 				43D055A32141BD1B00317BE2 /* Info.plist */,
-				43D055A92141BF6100317BE2 /* ContactListViewController.swift */,
-				43D055AD2141C48A00317BE2 /* Contact.swift */,
 			);
 			path = ContactList;
 			sourceTree = "<group>";
