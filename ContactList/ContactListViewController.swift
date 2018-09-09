@@ -128,6 +128,12 @@ class ContactListViewController: UITableViewController, AddContactViewController
             let controller = segue.destination as! AddContactViewController
             controller.delegate = self
         }
+        else if segue.identifier == "ShowContactDetail" {
+            let selectedContact = contactsToShow[0]
+            if let controller = segue.destination as? ContactDetailViewController {
+                controller.selectedContact = selectedContact
+            }
+        }
     }
 
 
