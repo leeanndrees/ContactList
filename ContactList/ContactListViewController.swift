@@ -24,32 +24,12 @@ class ContactListViewController: UITableViewController, AddContactViewController
         navigationController?.popViewController(animated: true)
     }
     
-    var contactsToShow: [Contact] = []
-    
-    
-    func populateContactList() {
-        let contacts = [
-            ("Hermione", "Granger", "555-236-1782"),
-            ("Ron", "Weasley", "555-678-9234"),
-            ("Rubeus", "Hagrid", "555-832-9298"),
-            ("Ginny", "Weasley", "555-678-9236"),
-            ("Luna", "Lovegood", "555-678-8222"),
-            ("Neville", "Longbottom", "555-678-9234"),
-        ]
-        
-        for item in contacts {
-            var newContact = Contact()
-            newContact.firstName = String(item.0)
-            newContact.lastName = String(item.1)
-            newContact.phoneNumber = String(item.2)
-            contactsToShow.append(newContact)
-        }
-    }
+    var contactsToShow = Contact.allContacts
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
-        populateContactList()
     }
 
     override func didReceiveMemoryWarning() {
