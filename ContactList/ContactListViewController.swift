@@ -27,7 +27,7 @@ class ContactListViewController: UITableViewController, AddContactViewController
     var contactsToShow: [Contact] = []
     
     
-    func displayContacts() {
+    func populateContactList() {
         let contacts = [
             ("Hermione", "Granger", "555-236-1782"),
             ("Ron", "Weasley", "555-678-9234"),
@@ -48,10 +48,8 @@ class ContactListViewController: UITableViewController, AddContactViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         navigationController?.navigationBar.prefersLargeTitles = true
-        
-        displayContacts()
+        populateContactList()
     }
 
     override func didReceiveMemoryWarning() {
