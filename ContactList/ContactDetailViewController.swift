@@ -30,7 +30,9 @@ class ContactDetailViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactDetail", for: indexPath)
-        cell.textLabel?.text = selectedContact?.firstName
+        if let contactToShow = selectedContact {
+            cell.textLabel?.text = "\(contactToShow.firstName) \(contactToShow.lastName) \(contactToShow.phoneNumber)"
+        }
         return cell
     }
     
