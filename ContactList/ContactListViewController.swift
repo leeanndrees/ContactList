@@ -29,8 +29,12 @@ class ContactListViewController: UITableViewController, AddContactViewController
     
     func displayContacts() {
         let contacts = [
-            ("Leeann", "Drees", "555"),
-            ("Matt", "", "555")
+            ("Hermione", "Granger", "555-236-1782"),
+            ("Ron", "Weasley", "555-678-9234"),
+            ("Rubeus", "Hagrid", "555-832-9298"),
+            ("Ginny", "Weasley", "555-678-9236"),
+            ("Luna", "Lovegood", "555-678-8222"),
+            ("Neville", "Longbottom", "555-678-9234"),
         ]
         
         for item in contacts {
