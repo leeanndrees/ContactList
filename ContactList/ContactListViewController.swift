@@ -55,11 +55,11 @@ class ContactListViewController: UITableViewController, AddContactViewController
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "AddContact" {
+        if segue.identifier == SegueIdentifier.AddContact.rawValue {
             let controller = segue.destination as! AddContactViewController
             controller.delegate = self
         }
-        else if segue.identifier == "ShowContactDetail" {
+        else if segue.identifier == SegueIdentifier.ShowContactDetail.rawValue {
             let selectedIndexPath = self.tableView.indexPathForSelectedRow!
             let row = selectedIndexPath.row
             let selectedContact = contactsToShow[row]

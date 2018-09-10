@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43704C712146A97B00A20063 /* SegueIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43704C702146A97B00A20063 /* SegueIdentifiers.swift */; };
 		43B630E32145966400DDE8A7 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B630E22145966400DDE8A7 /* ContactDetailViewController.swift */; };
 		43D055982141BD1B00317BE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D055972141BD1B00317BE2 /* AppDelegate.swift */; };
 		43D0559D2141BD1B00317BE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D0559B2141BD1B00317BE2 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43704C702146A97B00A20063 /* SegueIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueIdentifiers.swift; sourceTree = "<group>"; };
 		43B630E22145966400DDE8A7 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 		43D055942141BD1B00317BE2 /* ContactList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43D055972141BD1B00317BE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				43D0559B2141BD1B00317BE2 /* Main.storyboard */,
 				43D055AB2141BFB300317BE2 /* AddContactViewController.swift */,
 				43B630E22145966400DDE8A7 /* ContactDetailViewController.swift */,
+				43704C702146A97B00A20063 /* SegueIdentifiers.swift */,
 				43D055A92141BF6100317BE2 /* ContactListViewController.swift */,
 				43D0559E2141BD1B00317BE2 /* Assets.xcassets */,
 				43D055A02141BD1B00317BE2 /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43704C712146A97B00A20063 /* SegueIdentifiers.swift in Sources */,
 				43D055AE2141C48A00317BE2 /* Contact.swift in Sources */,
 				43B630E32145966400DDE8A7 /* ContactDetailViewController.swift in Sources */,
 				43D055AC2141BFB300317BE2 /* AddContactViewController.swift in Sources */,
